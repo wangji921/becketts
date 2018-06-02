@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'StaticPagesController@home');
-Route::get('/help', 'StaticPagesController@help');
-Route::get('photos', 'StaticPagesController@photos');
-Route::get('news', 'StaticPagesController@news');
+Route::get('/', 'StaticPagesController@home')->name('home');
+Route::get('/help', 'StaticPagesController@help')->name('help');
+Route::get('photos', 'StaticPagesController@photos')->name('photos');
+Route::get('news', 'StaticPagesController@news')->name('news');
+Route::get('about', 'StaticPagesController@about')->name('about');
