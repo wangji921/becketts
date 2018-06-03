@@ -1,15 +1,9 @@
-<div class="col-md-12">
-    <footer class="footer">
-      <small class="slogon">
-        <img class="brand-icon" src="https://lccdn.phphub.org/uploads/images/201612/12/1/iq7WQc2iuW.png?imageView2/1/w/34/h/34">
-        <a href="http://www.oncallmarketing.com">
-          Copyright &copy; OnCall Marketing 2018
-        </a>
-      </small>
-      <nav>
-        <ul>
-          <li><a href="{{ route('about') }}">About</a></li>
-        </ul>
-      </nav>
+<footer class="footer">
+        <div class="container">
+            <p class="pull-left">
+                Copyright &copy; <a href="http://http://www.oncallmarketing.biz/" target="_blank">OnCallMarketing</a> 2018 <span style="color: #e27575;font-size: 14px;">❤</span>
+            </p>
+
+            <p class="pull-right"><a href="mailto:name@email.com">Contact Us</a></p>
+        </div>
     </footer>
-  </div>
