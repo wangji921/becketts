@@ -13,7 +13,7 @@ class SeedCategoriesData extends Migration
      */
     public function up()
     {
-        $albums = [
+        $categories = [
             [
                 'name'          => 'Anniversary',
                 'description'   => 'Anniversary',
@@ -72,7 +72,7 @@ class SeedCategoriesData extends Migration
             ],
         ];
 
-        DB::table('categories')->insert($albums);
+        DB::table('categories')->insert($categories);
     }
 
     /**
