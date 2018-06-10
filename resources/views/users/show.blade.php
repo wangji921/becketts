@@ -11,10 +11,35 @@
             <div class="panel-body">
                 <div class="media">
                     <div align="center">
-                        <img class="thumbnail img-responsive" src="{{ config('app.url') . $user->avatar }}" width="300px" height="300px">
+                        @if($user->avatar)
+                            <img class="thumbnail img-responsive" src="{{ config('app.url') . $user->avatar }}" width="300px" height="300px">
+                        @else
+                            <img class="thumbnail img-responsive" src="https://cdn4.iconfinder.com/data/icons/iconado-1/100/user-512.png" alt="" width="100px" height="100px">
+                        @endif
+
                     </div>
                     <div class="media-body">
                         <hr>
+                        <h4><strong>Personal Details</strong></h4>
+                        <p>Last Updated on</p>
+                        <p>{{ $user->updated_at }}
+                        <br>({{ $user->updated_at->diffForHumans() }})</p>
+                        <li>First Name: {{ $user->firstname }}</li>
+                        <li>Family Name: {{ $user->familyname }}</li>
+                        <li>Preferred Name: {{ $user->familyname }}</li>
+                        <li>Father's Name: {{ $user->fatherfull }}</li>
+                        <li>Mother's Name: {{ $user->motherfull }}</li>
+                        <hr>
+                        <li>Gender: {{ $user->gender }}</li>
+                        <li>Date of Birth: {{ $user->birthday }}</li>
+                        <li>Wedding Date: {{ $user->weddingday }}</li>
+                        <hr>
+                        <li>Street: {{ $user->street }}</li>
+                        <li>Suburb: {{ $user->suburb }}</li>
+                        <li>City: {{ $user->birthcity }}</li>
+                        <li>State: {{ $user->state }}</li>
+                        <li>Post Code: {{ $user->zip }}</li>
+                        <li>Country: {{ $user->birthcountry }}</li>
                         <h4><strong>Description</strong></h4>
                         <p>{{ $user->introduction }}</p>
                         <hr>
