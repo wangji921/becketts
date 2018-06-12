@@ -8424,31 +8424,37 @@ body {
 
 /* Photo Index Page */
 
-.photos-index-page .photo-list .nav > li > a {
+.photos-index-page .photo-list .nav > li > a,
+.categories-show-page .photo-list .nav > li > a {
   position: relative;
   display: block;
   padding: 5px 14px;
   font-size: 0.9em;
 }
 
-.photos-index-page .photo-list a {
+.photos-index-page .photo-list a,
+.categories-show-page .photo-list a {
   color: #444444;
 }
 
-.photos-index-page .photo-list .meta {
+.photos-index-page .photo-list .meta,
+.categories-show-page .photo-list .meta {
   font-size: 0.9em;
   color: #b3b3b3;
 }
 
-.photos-index-page .photo-list .meta a {
+.photos-index-page .photo-list .meta a,
+.categories-show-page .photo-list .meta a {
   color: #b3b3b3;
 }
 
-.photos-index-page .photo-list .badge {
+.photos-index-page .photo-list .badge,
+.categories-show-page .photo-list .badge {
   background-color: #d8d8d8;
 }
 
-.photos-index-page .photo-list hr {
+.photos-index-page .photo-list hr,
+.categories-show-page .photo-list hr {
   margin-top: 12px;
   margin-bottom: 12px;
   border: 0;

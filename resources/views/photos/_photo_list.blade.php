@@ -22,9 +22,9 @@
 
                     <div class="media-body meta">
 
-                        <a href="#" title="{{ $photo->category->name }}">
+                        <a href="{{ route('categories.show', $photo->category->id) }}" title="{{ $photo->category->name }}">
                             <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
-                             {{ $photo->user->name }}
+                             {{ $photo->category->name }}
                         </a>
 
                         <span> • </span>

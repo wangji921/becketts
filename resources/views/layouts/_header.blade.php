@@ -19,10 +19,28 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="">Photos</a></li>
-                    <li><a href="">Albums</a></li>
-                    <li><a href="">Members</a></li>
-                    <li><a href="">Help</a></li>
+                    <li><a href="{{ route('photos.index') }}">Photos</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ route('categories.show', '1') }}">Anniversary</a></li>
+                            <li><a href="{{ route('categories.show', '2') }}">Birthday</a></li>
+                            <li><a href="{{ route('categories.show', '3') }}">Family Group</a></li>
+                            <li><a href="{{ route('categories.show', '4') }}">Family Member</a></li>
+                            <li><a href="{{ route('categories.show', '5') }}">Friends</a></li>
+                            <li><a href="{{ route('categories.show', '6') }}">Holidays</a></li>
+                            <li><a href="{{ route('categories.show', '7') }}">House</a></li>
+                            <li><a href="{{ route('categories.show', '8') }}">Pet</a></li>
+                            <li><a href="{{ route('categories.show', '9') }}">Place</a></li>
+                            <li><a href="{{ route('categories.show', '10') }}">Special Events</a></li>                            <li><a href="{{ route('categories.show', '10') }}">Special Events</a></li>
+                            <li><a href="{{ route('categories.show', '10') }}">Wedding</a></li>
+                            <li><a href="{{ route('categories.show', '10') }}">Work</a></li>
+                            <li><a href="{{ route('categories.show', '10') }}">Work Mate</a></li>
+                            <li><a href="{{ route('categories.show', '10') }}">Others</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Members</a></li>
+                    <li><a href="#">Help</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
