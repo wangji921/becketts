@@ -8422,3 +8422,36 @@ body {
   margin-bottom: 0px;
 }
 
+/* Photo Index Page */
+
+.photos-index-page .photo-list .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 5px 14px;
+  font-size: 0.9em;
+}
+
+.photos-index-page .photo-list a {
+  color: #444444;
+}
+
+.photos-index-page .photo-list .meta {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
+.photos-index-page .photo-list .meta a {
+  color: #b3b3b3;
+}
+
+.photos-index-page .photo-list .badge {
+  background-color: #d8d8d8;
+}
+
+.photos-index-page .photo-list hr {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border: 0;
+  border-top: 1px solid #dcebf5;
+}
+
