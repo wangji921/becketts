@@ -63,7 +63,11 @@
         {{-- 用户发布的内容 --}}
         <div class="panel panel-default">
             <div class="panel-body">
-                no data ~_~
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#">{{ $user->name }}'s photos</a></li>
+                    <li><a href="#">{{ $user->name }}'s replies</a></li>
+                </ul>
+                @include('users._photos', ['photos' => $user->photos()->recent()->paginate(5)])
             </div>
         </div>
 
