@@ -14,12 +14,18 @@ class PhotosController extends Controller
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
-	public function index()
-	{
-        // $photos = Photo::paginate();
-        $photos = Photo::with('user', 'category')->paginate(30);
-		return view('photos.index', compact('photos'));
-	}
+	// public function index()
+	// {
+    //     // $photos = Photo::paginate();
+    //     $photos = Photo::with('user', 'category')->paginate(30);
+	// 	return view('photos.index', compact('photos'));
+    // }
+
+    public function index(Request $request, Photo $photo)
+    {
+        $photos = $photo->withOrder($request->order)->paginate(20);
+        return view('photos.index', compact('photos'));
+    }
 
     public function show(Photo $photo)
     {

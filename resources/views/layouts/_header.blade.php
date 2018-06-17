@@ -19,24 +19,24 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ route('photos.index') }}">Photos</a></li>
-                    <li class="dropdown">
+                    <li class="{{ Request::is('photos') ? 'active' : '' }}"><a href="{{ route('photos.index') }}">Photos</a></li>
+                    <li class="dropdown {{ request()->is('categories/*') ? 'active' : '' }}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories</a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ route('categories.show', '1') }}">Anniversary</a></li>
-                            <li><a href="{{ route('categories.show', '2') }}">Birthday</a></li>
-                            <li><a href="{{ route('categories.show', '3') }}">Family Group</a></li>
-                            <li><a href="{{ route('categories.show', '4') }}">Family Member</a></li>
-                            <li><a href="{{ route('categories.show', '5') }}">Friends</a></li>
-                            <li><a href="{{ route('categories.show', '6') }}">Holidays</a></li>
-                            <li><a href="{{ route('categories.show', '7') }}">House</a></li>
-                            <li><a href="{{ route('categories.show', '8') }}">Pet</a></li>
-                            <li><a href="{{ route('categories.show', '9') }}">Place</a></li>
-                            <li><a href="{{ route('categories.show', '10') }}">Special Events</a></li>                            <li><a href="{{ route('categories.show', '10') }}">Special Events</a></li>
-                            <li><a href="{{ route('categories.show', '10') }}">Wedding</a></li>
-                            <li><a href="{{ route('categories.show', '10') }}">Work</a></li>
-                            <li><a href="{{ route('categories.show', '10') }}">Work Mate</a></li>
-                            <li><a href="{{ route('categories.show', '10') }}">Others</a></li>
+                            <li class="{{ request()->is('categories/1') ? 'active' : '' }}"><a href="{{ route('categories.show', '1') }}">Anniversary</a></li>
+                            <li class="{{ request()->is('categories/2') ? 'active' : '' }}"><a href="{{ route('categories.show', '2') }}">Birthday</a></li>
+                            <li class="{{ request()->is('categories/3') ? 'active' : '' }}"><a href="{{ route('categories.show', '3') }}">Family Group</a></li>
+                            <li class="{{ request()->is('categories/4') ? 'active' : '' }}"><a href="{{ route('categories.show', '4') }}">Family Member</a></li>
+                            <li class="{{ request()->is('categories/5') ? 'active' : '' }}"><a href="{{ route('categories.show', '5') }}">Friends</a></li>
+                            <li class="{{ request()->is('categories/6') ? 'active' : '' }}"><a href="{{ route('categories.show', '6') }}">Holidays</a></li>
+                            <li class="{{ request()->is('categories/7') ? 'active' : '' }}"><a href="{{ route('categories.show', '7') }}">House</a></li>
+                            <li class="{{ request()->is('categories/8') ? 'active' : '' }}"><a href="{{ route('categories.show', '8') }}">Pet</a></li>
+                            <li class="{{ request()->is('categories/9') ? 'active' : '' }}"><a href="{{ route('categories.show', '9') }}">Place</a></li>
+                            <li class="{{ request()->is('categories/10') ? 'active' : '' }}"><a href="{{ route('categories.show', '10') }}">Special Events</a></li>                            <li><a href="{{ route('categories.show', '10') }}">Special Events</a></li>
+                            <li class="{{ request()->is('categories/11') ? 'active' : '' }}"><a href="{{ route('categories.show', '10') }}">Wedding</a></li>
+                            <li class="{{ request()->is('categories/12') ? 'active' : '' }}"><a href="{{ route('categories.show', '10') }}">Work</a></li>
+                            <li class="{{ request()->is('categories/13') ? 'active' : '' }}"><a href="{{ route('categories.show', '10') }}">Work Mate</a></li>
+                            <li class="{{ request()->is('categories/14') ? 'active' : '' }}"><a href="{{ route('categories.show', '10') }}">Others</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Members</a></li>

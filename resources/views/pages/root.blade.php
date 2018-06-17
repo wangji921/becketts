@@ -2,5 +2,5 @@
 @section('title', 'Homepage')
 
 @section('content')
-  <h1>这里是首页</h1>
+  <h1>Welcome to Beckett Family Photo Album</h1>
 @stop

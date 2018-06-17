@@ -14,18 +14,17 @@
         @endif
 
         <div class="panel panel-default">
-
             <div class="panel-heading">
                 <ul class="nav nav-pills">
-                    <li role="presentation" class="active"><a href="#">Last reply</a></li>
-                    <li role="presentation"><a href="#">Latest</a></li>
+                    <li class="{{ request()->query('order') === 'recent' ? '' : 'active' }}" role="presentation"><a href="{{ Request::url() }}?order=default">Last reply</a></li>
+                    <li class="{{ request()->query('order') === 'recent' ? 'active' : '' }}" role="presentation"><a href="{{ Request::url() }}?order=recent">Latest</a></li>
                 </ul>
             </div>
 
             <div class="panel-body">
                 {{-- photos list --}}
                 @include('photos._photo_list', ['photos' => $photos])
-                {{-- 分页 --}}
+                {{-- pageinate --}}
                 {!! $photos->appends(Request::except('page'))->render() !!}
             </div>
         </div>
