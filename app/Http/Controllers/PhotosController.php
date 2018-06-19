@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Photo;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PhotoRequest;
+use Auth;
 
 class PhotosController extends Controller
 {
@@ -34,12 +36,16 @@ class PhotosController extends Controller
 
 	public function create(Photo $photo)
 	{
-		return view('photos.create_and_edit', compact('photo'));
+        $categories = Category::all();
+		return view('photos.create_and_edit', compact('photo', 'categories'));
 	}
 
-	public function store(PhotoRequest $request)
+	public function store(PhotoRequest $request, Photo $photo)
 	{
-		$photo = Photo::create($request->all());
+        $photo->fill($request->all());
+        $photo->user_id = Auth::id();
+        $photo->save();
+		// $photo = Photo::create($request->all());
 		return redirect()->route('photos.show', $photo->id)->with('message', 'Created successfully.');
 	}
 
