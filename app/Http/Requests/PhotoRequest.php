@@ -20,11 +20,11 @@ class PhotoRequest extends Request
             case 'PATCH':
             {
                 return [
-                    'title'         => 'required|min:2',
-                    'year'          => 'required',
-                    'month'         => 'required',
-                    'category_id'   => 'required|numeric',
-                    'description'   => 'required',
+                    'title'         => '',
+                    'year'          => '',
+                    'month'         => '',
+                    'category_id'   => '',
+                    'description'   => '',
                 ];
             }
             case 'GET':

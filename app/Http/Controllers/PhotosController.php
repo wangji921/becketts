@@ -37,7 +37,7 @@ class PhotosController extends Controller
 	public function create(Photo $photo)
 	{
         $categories = Category::all();
-		return view('photos.create_and_edit', compact('photo', 'categories'));
+		return view('photos.create', compact('photo', 'categories'));
 	}
 
 	public function store(PhotoRequest $request, Photo $photo)
@@ -52,7 +52,7 @@ class PhotosController extends Controller
 	public function edit(Photo $photo)
 	{
         $this->authorize('update', $photo);
-		return view('photos.create_and_edit', compact('photo'));
+		return view('photos.edit', compact('photo'));
 	}
 
 	public function update(PhotoRequest $request, Photo $photo)
@@ -69,5 +69,14 @@ class PhotosController extends Controller
 		$photo->delete();
 
 		return redirect()->route('photos.index')->with('message', 'Deleted successfully.');
-	}
+    }
+
+    public function uploadImage(Request $request, ImageUploadHandler $uploader)
+    {
+        $photos = $request->file('file');
+
+        if (!is_array($photos)) {
+            $photos = [$photos];
+        }
+    }
 }
